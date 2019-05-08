@@ -14,7 +14,11 @@ public class InsertionSorter extends Sorter {
     
 
     /**
-      sort the user's data, implementing insertion sort
+      pre-condition: must be invoked on an Array of Strings
+      
+      Iterate through the list and insert each element after index 0 in its proper place using the helper function, insert()
+      
+      post-condition: the Array mySort() is invoked on will be sorted in monotonic increasing order.
      */
     public void mySort() {
         // iterate through
@@ -33,7 +37,11 @@ public class InsertionSorter extends Sorter {
     }
     
     /**
-      helper function for mySort()
+      pre-condition: there must be at least one element in the sorted region of the list
+      
+      Insert the element in its proper place, shifting larger elements as it goes, and thus, expanding the sorted region. 
+      
+      post-condition: the desired element and elements larger than it will be in their proper location in the sorted region
      */
     private void insert(int numSorted){
         String valueToInsert = elements.get(numSorted);
