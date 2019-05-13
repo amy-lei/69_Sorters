@@ -37,15 +37,22 @@ public class UserOfSorts {
             , "Z"  
             ));
 
-        // insertion sort                   
-        oneTest( "insertion sort "
-               , new InsertionSorter( unsorted)
-               );
+        // // insertion sort                   
+        // oneTest( "insertion sort "
+               // , new InsertionSorter( unsorted)
+               // );
 
-        // selection sort                   
-        oneTest( "selection sort "
-               , new SelectionSorter( unsorted)
+        // // selection sort                   
+        // oneTest( "selection sort "
+               // , new SelectionSorter( unsorted)
+               // );
+
+        // subsortthenmerge sort                   
+        oneTest( "SubSortThenMerge sort "
+               , new SubSortThenMerge_Sorter( unsorted)
                );
+        
+               
     }
 
 

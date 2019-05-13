@@ -23,17 +23,19 @@ public class SelectionSorter extends Sorter{
     public void mySort() {
         //iterate through list
         for( int index = 0
-            ;index < elements.size()
+            ;index < elements.size() - 1
             ;index++
             ){
         // find smallest and set it at cur index
-                String smallest = elements.get(champIndex(index));
-                elements.set( index
-                            , smallest
+                int smallest = champIndex(index);
+                elements.set( smallest
+                            , elements.set( index
+                                           ,elements.get(smallest)
+                                           )
                             );
                 //for debugging
                 System.out.println( "after inserting element "
-                                    + smallest
+                                    + elements.get(smallest)
                                     + " elements: "
                                     + elements
                                     );
